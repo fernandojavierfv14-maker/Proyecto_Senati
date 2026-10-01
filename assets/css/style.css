@@ -32,3 +32,7 @@ header{
     display: block; /* Elimiar espacios entre los lados */
     object-fit: contain; /* Ajusta la imagen, sin recortarse a los lados */
 }
+
+.left-img{
+    display: flex;
+}
