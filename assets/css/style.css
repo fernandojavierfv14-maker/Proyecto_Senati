@@ -51,5 +51,5 @@ header{
  background-color: #000000; /* Color de linea */
  border-radius: 2px; /* Se crea un gruosor de la linea */
  width: 100%; /* La anchura */
- height: 4px; /* El alto */
+ height: 3px; /* El alto */
 }
