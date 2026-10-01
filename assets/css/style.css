@@ -41,4 +41,9 @@ header{
 /* MENU HAMBURGUESA */
 .right-hamburguesa{
     cursor: none; /* Desactivamos el cusor */
+    display: flex;
+}
+.right-hamburguesa span{
+ background-color: #000000; /* Color de linea */
+ border-radius: 2px; /* Se crea un gruosor de la linea */
 }
