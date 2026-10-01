@@ -18,37 +18,70 @@ body{
     background-color: #000000; /* Color del fondo BLANCO*/
 }
 
-header{
-    background-color: #ffff; /*Color del fondo negro*/
-    height: 55px; /* Altura de la barra de MENU*/
-    display: flex;
-    padding: 0 16px;
-}
-/* class="img-logo "*/
-.img-logo{
-    height: 32px;
-    width: auto; /* por defecto quiero que se adapte */
-    display: block; /* Eliminar espacios entre los lados*/
-    object-fit: contain; /* Ajusta la imagen, sin recortarse a los lados */
-}
-
-.left-img{
+header {
+  background-color: #ffffff; /* Fondo blanco */
+  height: 55px;
   display: flex;
-  align-items: center;
+  align-items: center;             /* Centra verticalmente */
+  justify-content: space-between;  /* Logo a la izquierda, menú a la derecha */
+  padding: 0 16px;
+  position: relative;
+  z-index: 20;
+  border-bottom: 1px solid #000;
 }
 
 /* ==== MENU HAMBURGUESA ==== */
-.right-hamburguesa{
-  cursor: none; /* Desactivamos el cursor */
+.right-hamburguesa {
+  background: none;
+  border: none;
+  cursor: pointer;
   display: flex;
-  height: 28px;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 22px;
   width: 28px;
-  justify-content: space-between; /*Separacion entre ambos*/
-  flex-direction: column; /* Dirección Vertical  */
 }
-.right-hamburguesa span{
-  background-color: #000000; /* Color de la linea */
-  border-radius: 2px;  /* Se crea un gruosor de la linea */
-  width: 100%; /* La anchura */
-  height: 9px; /* Alto */
+
+.right-hamburguesa span {
+  background-color: #000000;
+  border-radius: 2px;
+  width: 100%;
+  height: 3px;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+/* Estado abierto: las 3 líneas se convierten en X */
+.right-hamburguesa.activo span:nth-child(1) {
+  transform: translateY(9.5px) rotate(45deg);
+}
+.right-hamburguesa.activo span:nth-child(2) {
+  opacity: 0;
+}
+.right-hamburguesa.activo span:nth-child(3) {
+  transform: translateY(-9.5px) rotate(-45deg);
+}
+
+/* ==== MENU DESPLEGABLE ==== */
+.menu {
+  display: none;
+  position: fixed;
+  top: 55px;            /* Debajo del header */
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ffffff;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+}
+
+.menu.abierto {
+  display: flex;
+}
+
+.menu a {
+  color: #000;
+  text-decoration: none;
+  font-size: 16px;
 }
