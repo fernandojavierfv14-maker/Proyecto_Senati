@@ -27,4 +27,6 @@ header{
 /* class="img-logo "*/
 .img-logo{
     height: 32px;
+    width: auto; /* por defecto quiero que se adapte */
+    display: block; /* Elimiar espacios entre los lados */
 }
