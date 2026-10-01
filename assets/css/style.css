@@ -37,3 +37,8 @@ header{
     display: flex;
     align-items: center;
 }
+
+/* MENU HAMBURGUESA */
+.right-hamburguesa{
+    cursor: none; /* Desactivamos el cusor */
+}
