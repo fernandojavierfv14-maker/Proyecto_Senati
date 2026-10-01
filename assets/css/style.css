@@ -44,6 +44,8 @@ header{
     display: flex;
     height: 28px;
     width: 28px;
+    justify-content: space-between; /* Separacion entre ambos */
+    flex-direction: column; /* Direccion vertical */
 }
 .right-hamburguesa span{
  background-color: #000000; /* Color de linea */
